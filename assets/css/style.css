@@ -1,0 +1,146 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+:root {
+    --font-family: 'Raleway', sans-serif;
+    --font-color: #464646;
+    --font-color-two: #ffffff;
+    --color-fondo-primario: #F5F5F5;
+    --color-fondo-secundario: #EAF2FD;
+    --color-botones-primario: #2A7AE4;
+    --ancho-alto-foto-Escritorio: 23em;
+    --ancho-alto-foto-Tablet: 9.125em;
+    --ancho-alto-foto-Celular: 6.125em;
+    --altura-header-Escritorio: 5.5em;
+    --altura-header-Tablet: 5em;
+    --altura-menu-Tablet: 2em;
+    --altura-header-Celular: 7.1em;
+    --altura-seccionPresentacion: calc(100vh - var(--altura-header-Escritorio));
+    --altura-seccionPresentacion-Celular: calc(100vh - var(--altura-header-Celular));
+    --altura-seccionPresentacion-Tablet: calc(100vh - var(--altura-header-Tablet));
+    --tamañoLetraEscritorio-titulos: 3.25em;
+    --tamañoLetraEscritorio-subtitulosSeccion: 2em;
+    --tamañoLetraEscritorio-subtitulosDscImagen: 1.375em;
+    --tamañoLetraEscritorio-parrafosYLinks-dscImagen-botones: 1em;
+    --tamañoLetraTablet-titulosYSubtitulos: 1.375em;
+    --tamañoLetraTablet-parrafosYLinks-dscBienvenida-subtitulosDscImagen: 1em;
+    --tamañoLetraTablet-parrafoSobreMi-dscImagenes-botones: 0.875em;
+    --tamañoLetraCelular-tituloBienvenida-subtitulosSeccion: 1.375em;
+    --tamañoLetraCelular-subtituloDescripcionImagen: 1em;
+    --tamañoLetraCelular-parrafosYLinks-descripcionImagen: 0.875em;
+    --tamaño-containerMaxWidth: 71em;
+    --padding-tablet-celularHorizontal: 0 2em;
+    --padding-celularVertical: 0 1em;
+    --centrar-con-margin: 0 auto;
+}
+html {
+    color: var(--font-color);
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.font-style {
+    color: var(--font-color);
+    font-family: var(--font-family);
+}
+.link-style {
+    color: var(--font-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.5s;
+}
+.link-style:hover {
+    color: var(--color-botones-primario);
+}
+.subtitulos {
+    font-size: var(--tamañoLetraEscritorio-subtitulosSeccion);
+    font-weight: 700;
+    margin: 0 0 2em 0;;
+    text-align: center;
+}
+.btn {
+    cursor: pointer;
+    font-size: var(--tamañoLetraEscritorio-parrafosYLinks-dscImagen-botones);
+    font-weight: 400;
+    margin: 0 1em 0 0;
+    text-decoration: none;
+    width: fit-content;
+    border-radius: 5px;
+}
+.btn--blanco {
+    color: var(--color-botones-primario);
+    background: transparent;
+    border: solid 0.1em var(--color-botones-primario);
+    padding: 1em;
+    transition: all 0.5s ease-out;
+}
+.btn--blanco:hover {
+    background-color: var(--color-botones-primario);
+    color: var(--color-fondo-primario);
+}
+.btn--azul {
+    color: var(--color-fondo-primario);
+    background: var(--color-botones-primario);
+    border: solid 0.1em var(--color-botones-primario);
+    padding: 1em;
+    transition: all 0.5s ease-out;
+}
+.btn--azul:hover {
+    background-color: transparent;
+    color: var(--color-botones-primario);
+}
+.lista-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11em, 1fr));
+    grid-template-rows: 1fr;
+    gap: 2em 1em;
+    list-style: none;
+    padding: 0;
+}
+.lista-grid__item {
+    background-color: #FFFFFF;
+    box-shadow: 9px 9px 9px 2px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    height: 10.875em;
+    justify-content: flex-end;
+    padding: 1em;
+}
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+    .subtitulos {
+        font-size: var(--tamañoLetraTablet-titulosYSubtitulos);
+    }
+    .btn {
+        font-size: var(--tamañoLetraTablet-parrafoSobreMi-dscImagenes-botones);
+    }
+    .lista-grid {
+        grid-template-columns: repeat(auto-fit, minmax(14em, 1fr));
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .lista-grid__item {
+        height: 7.375rem;
+    }
+}
+
+/*Celulares*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+    .subtitulos {
+        font-size: var(--tamañoLetraCelular-tituloBienvenida-subtitulosSeccion);
+    }
+    .btn {
+        font-size: var(--tamañoLetraCelular-parrafosYLinks-descripcionImagen);
+    }
+    .lista-grid {
+        grid-template-columns: repeat(auto-fit, minmax(9.75em, 1fr));
+        grid-template-columns: 1fr 1fr;
+    }
+    .lista-grid__item {
+        height: 7.375rem;
+    }
+}

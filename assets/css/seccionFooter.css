@@ -1,0 +1,29 @@
+.seccion-footer__copyright {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 0;
+}
+.seccion-footer__datos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.seccion-footer__autor {
+  color: #2c2828;
+  font-weight: 500;
+}
+/*Tablets*/
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  
+}
+/*Celulares*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .seccion-footer__copyright {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .seccion-footer__autor {
+    text-align: center;
+  }
+}

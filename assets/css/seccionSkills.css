@@ -1,0 +1,45 @@
+.seccion-skills {
+  padding: var(--altura-header-Escritorio) 0;
+}
+.seccion-skills__icono {
+  width: 2.3125rem;
+  height: 2.3125rem;
+}
+/*Selectores flag para iconos*/
+.seccion-skills__icono--html5 {
+  background: url("../img/iconos/skills/html5.svg") center / 100% 100% no-repeat;
+}
+.seccion-skills__icono--javascript {
+  background: url("../img/iconos/skills/js.svg") center / 100% 100% no-repeat;
+}
+.seccion-skills__icono--css3 {
+  background: url("../img/iconos/skills/css3.svg") center / 100% 100% no-repeat;
+}
+.seccion-skills__icono--react {
+  background: url("../img/iconos/skills/react.png") center / 100% 100% no-repeat;
+}
+.seccion-skills__icono--nodejs {
+  background: url("../img/iconos/skills/nodejs.png") center / 100% 100% no-repeat;
+}
+.seccion-skills__icono--git {
+  background: url("../img/iconos/skills/git.png") center / 100% 100% no-repeat;
+}
+.seccion-skills__descripcion {
+  font-weight: 700;
+  margin: 0.5em 0 0 0;
+  width: 100%;
+}
+
+/*Tablets*/
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .seccion-skills {
+    padding: var(--altura-header-Tablet) 0;
+  }
+}
+
+/*Celulares*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .seccion-skills {
+    padding: var(--altura-header-Celular) 0;
+  }
+}

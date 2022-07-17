@@ -1,0 +1,107 @@
+.header-principal {
+  background-color: var(--color-fondo-primario);
+  height: var(--altura-header-Escritorio);
+  top: 0;
+  width: 100%;
+  transition: transform 0.4s
+}
+.header-principal__container {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+  margin: var(--centrar-con-margin);
+  max-width: var(--tamaño-containerMaxWidth);
+}
+/* logo */
+.logo-container {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  width: 3.5em;
+}
+.logoContainer__link {
+  text-decoration: none;
+}
+.logo-container__logo {
+  width: 3.2em;
+}
+.menu {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: space-evenly;
+  max-width: 41.5em;
+  width: 100%;
+}
+.scroll-down .header-principal {
+  transform: translate3d(0, -100%, 0);
+}
+.scroll-up .header-principal {
+  transform: none;
+}
+/*Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .header-principal {
+    height: var(--altura-header-Tablet);
+  }
+  .header-principal__container{
+    flex-direction: column;
+    width: 100%;
+  }
+  .logo-container {
+    height: 3em;
+    width: 100%;
+  }
+  .logo-container__logo{
+    flex-direction: column;
+    width: 2.2em;
+  }
+  .menu{
+    height: var(--altura-header-Tablet);
+    width: inherit;
+  }
+}
+
+/*Celulares*/
+@media only screen and (min-width: 0px) and (max-width: 767px){
+    /*El header aumentará de altura */
+  .header-principal{
+    height: var(--altura-header-Celular);
+  }
+  .header-principal__container{
+    flex-direction: column;
+    width: 100%;
+  }
+  .logo-container{
+    height: 3em;
+    width: 100%;
+  }
+  .logo-container__logo {
+    flex-direction: column;
+    width: 2.2em;
+  }
+  .menu{
+    display: block;
+    height: var(--altura-header-Celular);
+    max-width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  .menu__link {
+    display: inherit;
+    font-size: var(--tamañoLetraCelular-parrafosYLinks-descripcionImagen);
+    font-weight: 500;
+    padding: 0.1em 0;
+    text-align: center;
+    transition: 0.2s ease-out;
+  }
+  .menu__link.link-style:hover {
+    transform: none;
+  }
+  .menu__link.link-style:active {
+    background-color: var(--font-color);
+    color: var(--color-fondo-primario);
+  }
+}

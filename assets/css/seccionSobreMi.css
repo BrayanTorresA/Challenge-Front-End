@@ -1,0 +1,46 @@
+/*Alineando items al inicio y estableciendo color de fondo secundario*/
+.seccion-sobre-mi {
+  align-items: flex-start;
+  background-color: var(--color-fondo-secundario);
+  display: flex;
+}
+.biografia {
+  max-width: 46.937em;
+  padding:var(--altura-header-Escritorio) 0;
+  width: 100%;
+}
+.biografia__subtitulo {
+  margin: 0;
+}
+.biografia__parrafo {
+  line-height: 19px;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+
+/*Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .biografia {
+    padding: var(--altura-header-Tablet) 0;
+  }
+  .biografia__subtitulo {
+    font-size: var(--tamañoLetraTablet-titulosYSubtitulos);
+  }
+  .biografia__parrafo {
+    font-size: var(--tamañoLetraTablet-parrafoSobreMi-dscImagenes-botones);
+  }
+}
+
+/*Celulares*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .biografia {
+    padding: var(--altura-header-Celular) 0;
+  }
+  .biografia__subtitulo {
+    font-size: var(--tamañoLetraCelular-tituloBienvenida-subtitulosSeccion);
+  }
+  .biografia__parrafo {
+    font-size: var(--tamañoLetraCelular-parrafosYLinks-descripcionImagen);
+  }
+}

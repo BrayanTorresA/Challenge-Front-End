@@ -1,0 +1,127 @@
+.experiencias-area {
+  padding: var(--altura-header-Escritorio) 0;
+}
+.experiencias-area__experiencia {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 4em 0;
+}
+.experiencias-area__experiencia:last-of-type {
+  margin: 0;
+}
+.experiencias-area__imagen {
+  height: 25.375em;
+  image-rendering: -webkit-optimize-contrast;
+  width: 66.198%;
+}
+.experiencias-area__imagen--orderPrimero {
+  order: 0;
+}
+.experiencias-area__imagen--orderSegundo {
+  order: 1;
+}
+.experiencias-area__descripciones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 31.802%;
+}
+.experiencias-area__descripciones--orderSegundo {
+  order: 1;
+}
+.experiencias-area__descripciones--orderPrimero {
+  order: 0;
+}
+.experiencias-area__proyecto {
+  font-size: var(--tamañoLetraEscritorio-subtitulosDscImagen);
+  font-weight: 700;
+  margin: 0;
+}
+.experiencias-area__organizacion {
+  font-size: var(--tamañoLetraEscritorio-parrafosYLinks-dscImagen-botones);
+  font-weight: 500;
+  margin: 0.5em 0;
+}
+.experiencias-area__btns {
+  display: flex;
+  width: 100%;
+}
+/*Tablets*/
+@media only screen and (min-width: 768px) and (max-width: 1080px) {
+  .experiencias-area {
+    padding: var(--altura-header-Tablet) 0;
+  }
+  .experiencias-area__experiencia {
+    flex-direction: column;
+  }
+  .experiencias-area__imagen {
+    height: 25em;
+    width: 100%;
+  }
+  .experiencias-area__imagen--orderPrimero {
+    order: 0;
+  }
+  .experiencias-area__imagen--orderSegundo {
+    order: 0;
+  }
+  .experiencias-area__descripciones {
+    margin: 0.5em 0 0 0;
+    padding: 0 0 0.5em 0;
+    width: 100%;
+  }
+  .experiencias-area__descripciones--orderSegundo {
+    order: 0;
+  }
+  .experiencias-area__descripciones--orderPrimero {
+    order: 0;
+  }
+  .experiencias-area__proyecto {
+    font-size: var(--tamañoLetraTablet-parrafosYLinks-dscBienvenida-subtitulosDscImagen);
+  }
+  .experiencias-area__organizacion {
+    font-size: var(--tamañoLetraTablet-parrafoSobreMi-dscImagenes-botones);
+  }
+}
+/*Celulares*/
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .experiencias-area {
+    padding: var(--altura-header-Celular) 0;
+  }
+  .experiencias-area__experiencia {
+    flex-direction: column;
+  }
+  .experiencias-area__imagen {
+    height: 12em;
+    width: 100%;
+  }
+  .experiencias-area__imagen--orderPrimero {
+    order: 0;
+  }
+  .experiencias-area__imagen--orderSegundo {
+    order: 0;
+  }
+  @media only screen and (min-width: 428px) and (max-width: 767px) {
+    .experiencias-area__imagen {
+      width: 100%;
+      height: 20em;
+    }
+  }
+  .experiencias-area__descripciones {
+    background-position: center;
+    margin: 0.5em 0 0 0;
+    padding: 0 0 0.5em 0;
+    width: 100%;
+  }
+  .experiencias-area__descripciones--orderSegundo {
+    order: 0;
+  }
+  .experiencias-area__descripciones--orderPrimero {
+    order: 0;
+  }
+  .experiencias-area__proyecto {
+    font-size: var(--tamañoLetraCelular-subtituloDescripcionImagen);
+  }
+  .experiencias-area__organizacion {
+    font-size: var(--tamañoLetraCelular-parrafosYLinks-descripcionImagen);
+  }
+}
